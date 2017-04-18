@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1">
+
+<meta name="maintainer" content = "p.b.mcnelis@gmail.com"/>
+
+
+<form id="Animal">
+<field name="FavAnimal">
+	<prompt>
+	What is your favorite animal?
+	</prompt>
+
+  
+
+<grammar xml:lang="en-US" root = "ANIMAL">
+    <rule id="ANIMAL">
+    
+    
+	 <one-of> 
+      <item>cat</item>
+      <item>dog</item>
+      <item>bird</item>
+      <item>horse</item>
+      <item>chicken</item>
+      <item>elephant</item>
+      <item>lion</item>
+      <item>tiger</item>
+      <item>bear</item>
+      <item>parrot</item>
+      <item>goat</item>
+      <item>pig</item>
+      <item></item>
+     </one-of>
+     </rule>
+     </grammar>
+     
+     <!-- The user was silent, restart the field. -->
+   <noinput>
+    I did not hear anything. Please try again.
+    <reprompt/>
+   </noinput>
+ 
+   <!-- The user said something that was not defined in our grammar. -->
+   <nomatch>
+     I did not recognize that animal. Please try again.
+    <reprompt/>
+   </nomatch>
+</field>
+
+<filled namelist="FavAnimal">
+  <if cond="FavAnimal == 'cat'">
+  	<prompt>
+  	My cat is a hellspawn.
+  	</prompt>
+  <if cond="FavAnimal == 'dog'">
+  	<prompt>
+  I've always wanted a dog.
+  	</prompt>
+  <if cond="FavAnimal == 'bird'">
+  	<prompt>
+  	I wish I could fly too.
+  	</prompt>
+  <if cond="FavAnimal == 'horse'">
+  	<prompt>
+  	Horses are basically two thousand pound dogs.
+  	</prompt>
+  <if cond="FavAnimal == 'chicken'">
+  	<prompt>
+  	I love fresh eggs.
+  	</prompt>
+  <if cond="FavAnimal == 'elephant'">
+  	<prompt>
+  	Iv'e only ever seen them in the zoo.
+  	</prompt>
+  <if cond="FavAnimal == 'lion'">
+  	<prompt>
+  	King of the jungle.
+  	</prompt>
+  <if cond="FavAnimal == 'tiger'">
+  	<prompt>
+  	Here kitty kitty kitty.
+  	</prompt>
+  <if cond="FavAnimal == 'bear'">
+  	<prompt>
+  	Big bear is iron tough.
+  	</prompt>
+  <if cond="FavAnimal == 'parrot'">
+  	<prompt>
+  	Poly want a cracker?
+  	</prompt>
+  <if cond="FavAnimal == 'goat'">
+  	<prompt>
+  	I'm not a fan of goat cheese.
+  	</prompt>
+  <if cond="FavAnimal == 'pig'">
+  	<prompt>
+ 	 mmmmmm. Bacon.
+ 	 </prompt>
+  </if>
+  </filled>
+  </form>
+  </vxml>
+
+   
